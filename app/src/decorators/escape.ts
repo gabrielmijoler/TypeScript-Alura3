@@ -9,8 +9,7 @@ export function escapar(
     if(typeof retorno === "string"){
       // console.log(`@Escape em ação classe ${this.constructor.name} 
       // para o metodo ${propertyKey}`)
-      retorno = retorno
-          .replace(/<script>[\s\S]*?<\/script>/, '');
+      retorno = retorno.replace(/<script>[\s\S]*?<\/script>/, '');
     }
     return retorno
   }
