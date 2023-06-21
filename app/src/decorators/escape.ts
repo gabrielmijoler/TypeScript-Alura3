@@ -7,8 +7,8 @@ export function escapar(
   descriptor.value = function(...args:any[]){
     let retorno = mentodoOriginal.apply(this, args);
     if(typeof retorno === "string"){
-      console.log(`@Escape em ação classe ${this.constructor.name} 
-      para o metodo ${propertyKey}`)
+      // console.log(`@Escape em ação classe ${this.constructor.name} 
+      // para o metodo ${propertyKey}`)
       retorno = retorno
           .replace(/<script>[\s\S]*?<\/script>/, '');
     }

@@ -14,7 +14,7 @@ export abstract class View<T> {
         }
     }
     @logarTempoDeExecucao(true)// true quer ver em segundos.
-    @inspect()
+    @inspect
     public update(model: T): void {
         let template = this.template(model);
     }
