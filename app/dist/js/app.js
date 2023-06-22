@@ -17,5 +17,5 @@ if (botaoImporta) {
     });
 }
 else {
-    throw Error('Não foi possível inicializar a aplicação. Verifique se o form existe.');
+    throw Error('Botão importa não foi encontrado');
 }
