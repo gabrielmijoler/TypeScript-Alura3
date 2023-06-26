@@ -1,13 +1,11 @@
 import { imprimivel } from "../utils/imprimivel.js";
 
-export class Negociacao extends imprimivel{
+export class Negociacao implements imprimivel{
     constructor(
         private _data: Date, 
         public readonly quantidade: number, 
         public readonly valor: number
-    ) {
-        super();
-    }
+    ) {}
 
     get volume(): number {
         return this.quantidade * this.valor;
@@ -32,4 +30,10 @@ export class Negociacao extends imprimivel{
             Valor:${this.valor},
         `;
     };
+
+    public ehIgual(negociacao: Negociacao): boolean{
+        return this.data.getDate() === negociacao.data.getDate()
+            && this.data.getMonth() === negociacao.data.getMonth()
+            && this.data.getDay() === negociacao.data.getDay()
+    }
 }
